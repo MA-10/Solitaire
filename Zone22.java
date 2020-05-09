@@ -129,9 +129,6 @@ public class Zone22 {
 		Pile p=new Pile(52); // pile intermédiaire(contient les cartes à deplacer)
 		while((tab[col1].taille-pos)!=0)// on depile les cartes à deplacer dans p (pile intermediare) 
 		{
-			
-			p.empiler(tab[col1].dépiler());
-			
 			if (p.taille>1)
 			{
 				if (tab[col1].sommet().type==p.sommet().type || tab[col1].sommet().rang<=p.sommet().rang )
@@ -145,6 +142,9 @@ public class Zone22 {
 					return false;
 				}
 			}
+			p.empiler(tab[col1].dépiler());
+			
+			
 		}
 		
 		Carte c=p.dépiler();

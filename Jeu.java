@@ -313,7 +313,7 @@ public class Jeu {
 					score+=2;
 				}
 				break;
-			case 6:
+			case 6://juste pour tester la methode permutter qui permutte les 2 dernieres cartes d un tas du zone 2 
 				System.out.println("Entrer numero de pile : ");
 				Scanner scanner8=new Scanner(System.in);
 				int per=scanner8.nextInt();
@@ -330,6 +330,7 @@ public class Jeu {
 			if (z1.est_terminé()==true)
 			{
 				System.out.println("Félicitation ! Vous avez gagné.");
+				System.out.println("Votre score est "+score+" !");
 				System.exit(-1);
 			}
 			if(jeu_bloqué(p,z1,z2))
